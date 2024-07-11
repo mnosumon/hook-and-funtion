@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const Usestate = () => {
   let [show, setShow] = useState(false)
@@ -15,9 +15,11 @@ const Usestate = () => {
 
   let inputRef = useRef(null)
   let handleChange = (e)=>{
-    inputRef.current.style.background = "blue"
-  }
 
+  }
+  useEffect(()=>{
+    inputRef.current.focus()
+  },[])
   let [count, setCount] = useState(0)
   let handleIncriment =()=>{
     
