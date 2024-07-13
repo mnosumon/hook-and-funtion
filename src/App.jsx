@@ -4,6 +4,7 @@ import Useeffect from './section/Useeffect'
 import ForwardRef from './section/ForwardRef'
 import PropsDistribute from './propsDrilling/PropsDistribute'
 import UserContextDistribute from './contextApi/UserContextDistribute'
+import AnotherWayContextApi from './anotherWayContextApi/AnotherWayContextApi'
 const App = () => {
   return (
     <>
@@ -11,7 +12,8 @@ const App = () => {
       <Useeffect/>
       <ForwardRef/> */}
       {/* <PropsDistribute/> */}
-      <UserContextDistribute/>
+      {/* <UserContextDistribute/> */}
+      <AnotherWayContextApi/>
     </>
   )
 }
