@@ -3,14 +3,7 @@ import ContextUser from './ContextUser';
 import { userHook } from '../hooks/UserHooks';
 
 const Users = () => {
-    const { userData, setUserData } = userHook()
-
-    const handleDelete = (id) => {
-        const filteredUsers = userData.filter(userItem => userItem.id !== id);
-        setUserData(filteredUsers);
-    };
-
-
+    const { userData } = userHook()
 
     return (
         <div className="grid grid-cols-4 gap-6 my-5">
@@ -18,7 +11,7 @@ const Users = () => {
                 <h1>Loading...</h1>
             ) : (
                 userData.map(userItem => (
-                    <ContextUser key={userItem.id} userItem={userItem} handleDelete={handleDelete} />
+                    <ContextUser key={userItem.id} userItem={userItem}  />
                 ))
             )}
             {/* {userData.map(userItem => (
