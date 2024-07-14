@@ -3,16 +3,7 @@ import { createContext, useState } from 'react';
 export const UserContext = createContext({});
 
 export const UserContextProvider = ({ children }) => {
-    let [userData, setUserData] = useState([
-      {
-        id: 1,
-        userName: "Sumon"
-      },
-      {
-        id: 2,
-        userName: "Helal"
-      }
-    ]);
+    let [userData, setUserData] = useState([]);
 
     const handleDelete = (id) => {
       const filteredUsers = userData.filter(userItem => userItem.id !== id);
